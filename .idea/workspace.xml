@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11fb3315-7565-4234-83cf-95007e405c06" name="Changes" comment="Premier commit">
-      <change afterPath="$PROJECT_DIR$/app/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/accueil.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/produits_categorie.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/tous_produits.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    <list default="true" id="11fb3315-7565-4234-83cf-95007e405c06" name="Changes" comment="Le menu">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/images/brasserie.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/images/chimay-blanche-triple-cinq-cents.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/images/chimay-doree.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/images/chimay-rouge-premiere.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/images/hoegaarden-25cl.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/images/hoegaarden-rosee-00.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/images/hoegaarden-rosee.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/images/kasteelbier-brune.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/images/kasteelbier-rouge-00-33cl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/images/kasteelbier-rouge.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/images/st-louis-kriek-25cl.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/images/st-louis-premium-peche.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/bieres_liste.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/brasseries.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/produits_categorie.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/tous_produits.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +34,8 @@
       <list>
         <option value="Flask Main" />
         <option value="Dockerfile" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -65,23 +77,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Flask server.FlaskProject.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Flask server.FlaskProject.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/willo/PycharmProjects/FlaskProject/app/static/images",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\willo\PycharmProjects\FlaskProject\app\static\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\willo\PycharmProjects\FlaskProject\app" />
     </key>
@@ -131,7 +153,7 @@
       <workItem from="1777808219977" duration="77000" />
       <workItem from="1778574117642" duration="86000" />
       <workItem from="1778574217018" duration="5586000" />
-      <workItem from="1778843640487" duration="2998000" />
+      <workItem from="1778843640487" duration="12439000" />
     </task>
     <task id="LOCAL-00001" summary="Premier commit">
       <option name="closed" value="true" />
@@ -141,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777808077401</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Le menu">
+      <option name="closed" value="true" />
+      <created>1778846999156</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1778846999156</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,9 +179,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Premier commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Premier commit" />
+    <MESSAGE value="Le menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Le menu" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/FlaskProject$FlaskProject.coverage" NAME="FlaskProject Coverage Results" MODIFIED="1778846658002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlaskProject$FlaskProject.coverage" NAME="FlaskProject Coverage Results" MODIFIED="1778857982970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

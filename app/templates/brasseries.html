@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+<br>
+<h2>Nos brasseries partenaires</h2>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-3">
+            {% for brasserie in brasseries %}
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    <!-- Image par défaut si aucune image n'est associée à la brasserie -->
+                    <img src="{{ url_for('static', filename='images/brasserie.webp') }}"
+                         class="card-img-top"
+                         alt="{{ brasserie.nom_brasserie }}"
+                         style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ brasserie.nom_brasserie }}</h5>
+                        <p class="card-text">
+                            <i class="bi bi-geo-alt"></i> {{ brasserie.ville_brasserie }}
+                        </p>
+                        <a href="{{ url_for('bieres_brasserie', id_brasserie=brasserie.id_brasserie) }}">
+                            Voir ses bières
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
