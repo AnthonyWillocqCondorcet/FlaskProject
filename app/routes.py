@@ -1,12 +1,11 @@
+from flask import render_template, url_for
 from app import app
+
 @app.route('/')
-def hello_world():  # put application's code here
-    return 'Hello World!'
+@app.route("/accueil")
+def accueil():
+    return render_template('accueil.html', title='Bienvenue dans notre boutique')
 
-@app.route('/accueil')
-def accueil():  # put application's code here
-    return "Page d'accueil!"
-
-@app.route('/produits')
-def tous_les_produits():  # put application's code here
-    return "Page des produits"
+@app.route('/tous_produits')
+def tous_produits():
+    return render_template('tous_produits.html', title='Nos produits')
