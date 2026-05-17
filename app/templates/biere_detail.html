@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-5">
+            <img src="{{ url_for('static', filename='images/' + biere.image) }}"
+                 class="img-fluid rounded shadow"
+                 alt="{{ biere.nom_biere }}">
+        </div>
+        <div class="col-md-7">
+            <h1>{{ biere.nom_biere }}</h1>
+            <p class="lead">{{ biere.nom_brasserie }} - {{ biere.ville_brasserie }}</p>
+            <hr>
+            <ul class="list-unstyled">
+                <li><strong>Volume :</strong> {{ biere.volume }} cl</li>
+                <li><strong>Taux d'alcool :</strong> {{ biere.taux_alcool }} %</li>
+                <li><strong>Couleur :</strong> {{ biere.couleur }}</li>
+                <li><strong>Prix :</strong> {{ biere.prix }} €</li>
+                <li><strong>Stock :</strong> {{ biere.stock }} unité(s)</li>
+            </ul>
+            <a href="{{ url_for('tous_bieres') }}" class="btn btn-secondary">Retour à la liste</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

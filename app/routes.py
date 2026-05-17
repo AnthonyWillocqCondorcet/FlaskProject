@@ -24,7 +24,7 @@ def accueil():
     nb_sans_alcool = models.Vue_bieres.query.filter(models.Vue_bieres.taux_alcool == 0).count()
 
     return render_template('accueil.html',
-                           title='Bienvenue chez Beer&Co',
+                           title='Brasserie du Vieux Moulin',
                            couleurs=couleurs_liste,
                            biere_sans_alcool_exemple=biere_sans_alcool_exemple,
                            nb_sans_alcool=nb_sans_alcool)
@@ -61,3 +61,8 @@ def brasseries():
     return render_template('brasseries.html',
                            title='Nos brasseries',
                            brasseries=brasseries)
+
+@app.route('/biere/<int:id_biere>')
+def biere_detail(id_biere):
+    biere = models.Vue_bieres.query.get_or_404(id_biere)
+    return render_template('biere_detail.html', biere=biere, title=biere.nom_biere)

@@ -8,19 +8,21 @@
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-4">
             {% for biere in bieres %}
             <div class="col">
-                <div class="card h-100 shadow-sm transition-card">
-                    <img src="{{ url_for('static', filename='images/' + biere.image) }}"
-                         class="card-img-top"
-                         alt="{{ biere.nom }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ biere.nom }}</h5>
-                        <p class="card-text">
-                            <strong>{{ biere.nom_biere }}</strong><br>
-                            {{ biere.volume }} cl · {{ biere.taux_alcool }}% alc.<br>
-                            <span class="text-primary fw-bold">{{ biere.prix }} €</span>
-                        </p>
+                <a href="{{ url_for('biere_detail', id_biere=biere.id_biere) }}" class="text-decoration-none text-dark">
+                    <div class="card h-100 shadow-sm transition-card">
+                        <img src="{{ url_for('static', filename='images/' + biere.image) }}"
+                             class="card-img-top"
+                             alt="{{ biere.nom }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ biere.nom }}</h5>
+                            <p class="card-text">
+                                <strong>{{ biere.nom_biere }}</strong><br>
+                                {{ biere.volume }} cl · {{ biere.taux_alcool }}% alc.<br>
+                                <span class="text-primary fw-bold">{{ biere.prix }} €</span>
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             {% endfor %}
         </div>
