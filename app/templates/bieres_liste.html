@@ -1,32 +1,29 @@
 {% extends "layout.html" %}
 {% block content %}
-    <br>
-    <h2>Nos bières</h2>
+<br>
+<h2>{{ title or "Nos bières" }}</h2>
 
-    <div class="album py-5 bg-light">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-3">
-                {% for biere in bieres %}
-                    <div class="col">
-                        <div class="card shadow-sm h-100">
-                            <!-- Affichage de l'image -->
-                            <img loading="lazy"
-                                 src="{{ url_for('static', filename='images/' + biere.image) }}"
-                                 alt="{{ biere.nom }}"
-                                 class="card-img-top"
-                                 style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ biere.nom }}</h5>
-                                <p class="card-text">
-                                    <strong>{{ biere.nom_brasserie }}</strong><br>
-                                    {{ biere.volume }} cl - {{ biere.taux_alcool }}% alc.<br>
-                                    {{ biere.prix }} €
-                                </p>
-                            </div>
-                        </div>
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-4">
+            {% for biere in bieres %}
+            <div class="col">
+                <div class="card h-100 shadow-sm transition-card">
+                    <img src="{{ url_for('static', filename='images/' + biere.image) }}"
+                         class="card-img-top"
+                         alt="{{ biere.nom }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ biere.nom }}</h5>
+                        <p class="card-text">
+                            <strong>{{ biere.nom_biere }}</strong><br>
+                            {{ biere.volume }} cl · {{ biere.taux_alcool }}% alc.<br>
+                            <span class="text-primary fw-bold">{{ biere.prix }} €</span>
+                        </p>
                     </div>
-                {% endfor %}
+                </div>
             </div>
+            {% endfor %}
         </div>
     </div>
-{% endblock content %}
+</div>
+{% endblock %}

@@ -1,5 +1,4 @@
-from . import app, db
-from flask_sqlalchemy import SQLAlchemy
+from app import db
 
 class Vue_bieres(db.Model):
     id_biere = db.Column(db.Integer, primary_key=True)

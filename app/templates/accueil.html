@@ -1,6 +1,52 @@
 {% extends "layout.html" %}
 {% block content %}
 <br>
-<h2>Page d'accueil</h2>
-<button class="btn btn-primary">Un bouton Bootstrap</button>
-{% endblock content %}
+<h2>Bienvenue chez Brasserie du Vieux Moulin !</h2>
+<p>Découvrez notre sélection de bières artisanales par couleur ou sans alcool.</p>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-4">
+            <!-- Vignettes par couleur -->
+            {% for couleur in couleurs %}
+            <div class="col">
+                <div class="card h-100 shadow-sm transition-card">
+                    <img src="{{ url_for('static', filename='images/' + couleur.biere_exemple.image) }}"
+                         class="card-img-top"
+                         alt="{{ couleur.biere_exemple.nom }}">
+                    <div class="card-body">
+                        <h5 class="card-title">Bières {{ couleur.nom }}</h5>
+                        <p class="card-text">
+                            {{ couleur.nb }} bière(s) · Exemple : {{ couleur.biere_exemple.nom }}
+                        </p>
+                        <a href="{{ url_for('bieres_couleur', couleur=couleur.nom) }}" class="btn btn-primary">
+                            Voir la sélection
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            <!-- Vignette Sans alcool -->
+            {% if biere_sans_alcool_exemple %}
+            <div class="col">
+                <div class="card h-100 shadow-sm transition-card">
+                    <img src="{{ url_for('static', filename='images/' + biere_sans_alcool_exemple.image) }}"
+                         class="card-img-top"
+                         alt="{{ biere_sans_alcool_exemple.nom }}">
+                    <div class="card-body">
+                        <h5 class="card-title">Bières sans alcool</h5>
+                        <p class="card-text">
+                            {{ nb_sans_alcool }} bière(s) 0,0% · Exemple : {{ biere_sans_alcool_exemple.nom }}
+                        </p>
+                        <a href="{{ url_for('bieres_sans_alcool') }}" class="btn btn-success">
+                            Voir la sélection
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
